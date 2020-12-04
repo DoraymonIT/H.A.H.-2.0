@@ -64,7 +64,7 @@ input[type="email"]:focus {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #f1f1f1;
+  background: #2b2b2b;
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
@@ -85,13 +85,15 @@ input[type="email"]:focus {
 }
 
 #header .logo a {
-  color: #111111;
+  color: white;
 }
 
 #header .logo a span {
   color: #e03a3c;
 }
-
+.bla span {
+  color: #e03a3c;
+}
 #header .logo img {
   max-height: 40px;
 }
@@ -128,7 +130,7 @@ input[type="email"]:focus {
 .nav-menu a {
   display: block;
   position: relative;
-  color: #111111;
+  color: white;
   transition: 0.3s;
   font-size: 15px;
   font-weight: 600;
@@ -257,7 +259,7 @@ input[type="email"]:focus {
 }
 
 .mobile-nav-toggle i {
-  color: #111111;
+  color: #ffffff;
 }
 
 .mobile-nav {
@@ -959,7 +961,7 @@ section {
   min-height: 200px;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
   position: relative;
-  background: #fff;
+  background: #2b2b2b;
   border-radius: 15px;
 }
 
@@ -2169,3 +2171,75 @@ section {
   color: #fff;
   text-decoration: none;
 }
+.containerr {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.skills {
+  text-align: right;
+  /* padding-top: 2px;
+  padding-bottom: 2px; */
+  padding-right: 2px;
+  color: #ffffff;
+  /* font-family: Cairo; */
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 20px;
+    border: 2px solid white;
+}
+
+.html {width: 90%;
+  background-color: #e03a3c;
+
+}
+.css{
+  width: 80%;
+  background-color: #e03a3c;
+}
+.js{
+  width: 65%;
+  background-color: #e03a3c;
+}
+
+.bootstrap{
+  width: 80%;
+  background-color: #e03a3c;
+}
+
+.wordpress{
+  width: 50%;
+  background-color: #e03a3c;
+}
+.angular{
+  width: 70%;
+  background-color: #e03a3c;
+}
+.java{
+  width: 75%;
+  background-color: #e03a3c;
+}
+.javafx{
+  width: 80%;
+  background-color: #e03a3c;
+}
+
+.sql{
+  width: 70%;
+  background-color: #e03a3c;
+}
+.php{
+  width: 70%;
+  background-color: #e03a3c;
+}
+
+.electron{
+  width: 45%;
+  background-color: #e03a3c;
+}
+.design{
+  width: 70%;
+  background-color: #e03a3c;
+}
+

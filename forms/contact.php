@@ -1,68 +1,42 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+ob_start();
+session_start();
+require_once('../admin/database_connect.php');
+// Submit LPortFolio
+if (isset($_POST['submit_contact'])) {
 
-  // Replace contact@example.com with your real receiving email address
-  // $receiving_email_address = 'contact@example.com';
+  $nom = $_POST['name'];
+  $email = $_POST['email'];
+  $subj = $_POST['subject'];
+  $msg = $_POST['message'];
+  $phone = $_POST['phone'];
 
-  // if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-  //   include( $php_email_form );
-  // } else {
-  //   die( 'Unable to load the "PHP Email Form" Library!');
-  // }
+  $sql =  $db->query('INSERT INTO contact (nom,email,subj,msg,phone) VALUES
+     ("' . $nom . '","' . $email . '","' . $subj . '","' . $msg . '","' . $phone . '")');
+  if ($sql) {
+    echo "Yes";
+    $_SESSION['success'] = 'Thanks !! Your Message has been send with success .';
+    header('location: ../index.php');
 
-  // $contact = new PHP_Email_Form;
-  // $contact->ajax = true;
-  
-  // $contact->to = $receiving_email_address;
-  // $contact->from_name = $_POST['name'];
-  // $contact->from_email = $_POST['email'];
-  // $contact->subject = $_POST['subject'];
-
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
-
-  // $contact->add_message( $_POST['name'], 'From');
-  // $contact->add_message( $_POST['email'], 'Email');
-  // $contact->add_message( $_POST['message'], 'Message', 10);
-
-  // echo $contact->send();
-
-try {
-  $base = new PDO('mysql:host=localhost; dbname=tetstini;port=3306', 'root', '');
-  //  echo ("Bien Connecte");
-
-} catch (exception $e) {
-  die('Erreur ' . $e->getMessage());
+  } else {
+    echo "NON";
+  }
 }
-return $base;
-if (isset($_POST['submit'])) {
+// Submit LPortFolio
+if (isset($_POST['subscribe'])) {
+
+  $email = $_POST['email'];
 
 
-     $name =$_POST['name'];
-     $mail =  $_POST['email'];
-     $subj = $_POST['subject'];
-     $message = $_POST['message'];
+  $sql =  $db->query('INSERT INTO newsletter (email) VALUES
+     ("' . $email . '")');
+  if ($sql) {
+    echo "Yes";
+    $_SESSION['subscribe'] = 'Thanks For Your Interests  !!';
+    header('location: ../index.html');
 
-     $sql = $base->query('INSERT INTO test (nom,email,subj,msg)VALUES ("' . $name . '","' . $mail . '","' . $subj . '","' . $message . '")');
-if($sql){
-  echo "OUI";
-}else{
-  echo "NON";
+  } else {
+    echo "NON";
+  }
 }
-  
- 
-}
-?>
 

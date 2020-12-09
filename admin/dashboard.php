@@ -42,58 +42,12 @@ if (empty($_SESSION['email'])) {
 
 <body>
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-xl-10 d-flex align-items-center">
-          <h1 class="logo mr-auto">
-            <a href="index.html">DoraymonIT<span>.</span></a>
-          </h1>
-          <nav class="nav-menu d-none d-lg-block">
-              <ul>
-                <!-- <li class="active"><a href="#header">Home</a></li> -->
-                <li><a class="active" href="#about">About Me</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <!-- <li><a href="#team">Team</a></li> -->
-                <li><a href="blog.html">Blog</a></li>
-                <!-- <li class="drop-down"><a href="">Drop Down</a>
-                <ul>
-                  <li><a href="#">Drop Down 1</a></li>
-                  <li class="drop-down"><a href="#">Deep Drop Down</a>
-                    <ul>
-                      <li><a href="#">Deep Drop Down 1</a></li>
-                      <li><a href="#">Deep Drop Down 2</a></li>
-                      <li><a href="#">Deep Drop Down 3</a></li>
-                      <li><a href="#">Deep Drop Down 4</a></li>
-                      <li><a href="#">Deep Drop Down 5</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Drop Down 2</a></li>
-                  <li><a href="#">Drop Down 3</a></li>
-                  <li><a href="#">Drop Down 4</a></li>
-                </ul>
-              </li> -->
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </nav>
-        </div>
-      </div>
-    </div>
-  
-  </header>
+  <?php include_once('header.php') ?>
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="" class="d-flex align-items-center">
-  <?php if (isset($_SESSION['email'])) : ?>
-            <h6 style="color: white;font-weight: 700;">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <?php echo $_SESSION['nom'] . ' ' . $_SESSION['prenom'] ?> <span>!</span>
-            </h6>
-            <a href="logout.php">
-              <button class="btn-get-started scrollto"><i class="fas fa-sign-out-alt    "></i> Logout</button></a>
-          <?php endif ?>
+
 
   </section>
   <!-- End Hero -->
@@ -115,18 +69,19 @@ if (empty($_SESSION['email'])) {
           Designed by <a href="https://doraymonit.com/">DoraymonIT .</a>
         </div>
       </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="github"><i class="bx bxl-github"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      <div class=" text-center text-md-right pt-3 pt-md-0">
+        <?php if (isset($_SESSION['email'])) : ?>
+          <h6 style="color: white;font-weight: 700;">
+            <i class="ri-user-6-line" ></i>
+            <?php echo $_SESSION['nom'] . ' ' . $_SESSION['prenom'] ?> <span>!</span>
+          </h6>
+          <a href="logout.php">
+            <button class="btn btn-sm btn-dark">   <i class="ri-logout-box-line"></i> Logout</button></a>
+        <?php endif ?>
       </div>
     </div>
   </footer>
   <!-- End Footer -->
-
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="../assets/vendor/jquery/jquery.min.js"></script>

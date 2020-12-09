@@ -80,18 +80,18 @@ if (!empty($_SESSION['email'])) {
                         <form action="login-process.php" method="post" role="form">
                             <div class="form-row">
                                 <div class="col-12 form-group">
-                                    <label for="email">Email</label>
+                                    <label for="email"> <i class="ri-mail-line"></i> Email</label>
                                     <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
                                 </div>
                                 <br>
                                 <div class="col-12 form-group">
-                                    <label for="email">Password</label>
+                                    <label for="email"> <i class="ri-lock-password-line"></i> Password</label>
                                     <input type="password" name="password" class="form-control" id="name" placeholder="Your Password" required />
                                 </div>
                             </div>
 
                             <div class="text-center">
-                                <button type="submit" name="submit_portfolio" class="btn-get-started scrollto">Log In</button>
+                                <button type="submit" name="submit_portfolio" class="btn btn-sm btn-dark"> <i class="ri-login-box-line"></i> Log In</button>
                             </div>
                         </form>
 

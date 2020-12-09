@@ -289,7 +289,7 @@ input[type="email"]:focus {
   position: relative;
   color: #111111;
   padding: 10px 20px;
-  font-weight: 500;
+  font-weight: 600;
   outline: none;
 }
 
@@ -299,7 +299,8 @@ input[type="email"]:focus {
 }
 
 .mobile-nav .drop-down > a:after {
-  content: "\ea99";
+  /* content: "\ea99"; */
+  content: "\ef34";
   font-family: IcoFont;
   padding-left: 10px;
   position: absolute;
@@ -307,7 +308,9 @@ input[type="email"]:focus {
 }
 
 .mobile-nav .active.drop-down > a:after {
-  content: "\eaa1";
+  /* content: "\eaa1"; */
+  content: "\eb99";
+
 }
 
 .mobile-nav .drop-down > a {
@@ -413,27 +416,6 @@ input[type="email"]:focus {
   color: #fff;
   background: #e03a3c;
   border: 2px solid #e03a3c;
-}
-.btn-get-started {
-  
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 5px 15px;
-  border-radius: 4px;
-  transition: 0.5s;
-  /* margin-top: 30px; */
-  color: #e03a3c;
-  background: #fff;
-  border: 2px solid#fff;
-}
-.btn-get-started:hover {
-  background:  #ffa8a9;
-  /* border-color:transparent; */
-  color: #fff;
-  border: 2px solid#fff;
 }
 
 @media (max-width: 768px) {
@@ -643,7 +625,10 @@ section {
   font-size: 16px;
   padding-left: 5px;
 }
-
+.btn-get-started i {
+  font-size: 16px;
+  padding-left: 5px;
+}
 .about .content .about-btn:hover {
   background: #e35052;
   background: #e03a3c;
@@ -2275,3 +2260,9 @@ section {
   background-color: #e03a3c;
 }
 
+.voila {
+  background-color: #e03a3c;
+  padding: 5px;
+  border-radius: 6px;
+  margin-bottom: 7px;
+}
